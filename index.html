@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Savory - Premium Food Delivery</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  <body>
+    <header>
+      <nav class="container">
+        <a href="#" class="logo">Savory</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="cart-btn" onclick="openCart()">
+          Cart
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </nav>
+    </header>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1>Exceptional Food, Delivered Fresh</h1>
+        <p>
+          Discover culinary excellence with our premium selection of dishes
+          crafted by world-class chefs
+        </p>
+        <a href="#menu" class="cta-btn">Explore Menu</a>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <h2 class="section-title">Our Signature Menu</h2>
+        <p class="section-subtitle">
+          Handcrafted dishes made with the finest ingredients, prepared fresh
+          daily by our expert chefs
+        </p>
+
+        <div class="menu-categories">
+          <div class="category-card active" onclick="filterMenu('all')">
+            <span class="category-icon">🍽️</span>
+            <h3 class="category-name">All Items</h3>
+          </div>
+          <div class="category-card" onclick="filterMenu('pizza')">
+            <span class="category-icon">🍕</span>
+            <h3 class="category-name">Pizza</h3>
+          </div>
+          <div class="category-card" onclick="filterMenu('burger')">
+            <span class="category-icon">🍔</span>
+            <h3 class="category-name">Burgers</h3>
+          </div>
+          <div class="category-card" onclick="filterMenu('pasta')">
+            <span class="category-icon">🍝</span>
+            <h3 class="category-name">Pasta</h3>
+          </div>
+          <div class="category-card" onclick="filterMenu('dessert')">
+            <span class="category-icon">🧁</span>
+            <h3 class="category-name">Desserts</h3>
+          </div>
+        </div>
+
+        <div class="menu-items" id="menuItems">
+          <!-- Menu items will be populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+      <div class="cart-content">
+        <div class="cart-header">
+          <h2>Your Cart</h2>
+          <button class="close-cart" onclick="closeCart()">&times;</button>
+        </div>
+        <div id="cartItems">
+          <!-- Cart items will be populated by JavaScript -->
+        </div>
+        <div class="cart-total" id="cartTotal">Total: $0.00</div>
+        <button class="checkout-btn" onclick="checkout()">
+          Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </body>
+  <footer style="text-align: center; padding: 1.5rem 0; background: var(--light-gray); color: var(--gray); font-size: 0.95rem;">
+  © All rights reserved by Abdullah Al Faisal
+</footer>
+
+
+</html>
